@@ -1,0 +1,517 @@
+<!-- Name: Nischal Khadka
+     Date: April 6, 2021
+     GroupName: RasenganCoder
+     ProjectName: CustomSneaks
+     project 1-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Our website for the project 1.-->
+    <meta name="author" content="Nischal Khadka, Gopal Thapa, Aman Khan" />
+    <meta name="keywords" content="Shoes customization,Sneakers, Nike, Adidas" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CustomSneaks.css" rel="stylesheet" type="text/css" />
+
+
+    <title>CustomSneaks</title>
+
+
+    <script>
+        // function to change the contents
+        function hChange() {
+            var message = "Design Your Own Ideas:";
+            var head = document.getElementById("lover");
+            head.innerHTML = message;
+        }
+
+        // function to change contents "welcome sneakers lover to the original form"
+        function h2Change() {
+            var message = "Welcome Sneakers Lover";
+            var head = document.getElementById("lover");
+            head.innerHTML = message;
+        }
+
+        // function to change the image
+        function imageChange() {
+            var image = document.getElementById("airforce");
+            image.src = "pictures/sneakers-4.jpeg";
+        }
+
+
+        // function to change the image
+        function conChange() {
+            var image = document.getElementById("airforce");
+            image.src = "pictures/shoe-5087660_960_720.jpeg";
+
+
+
+        }
+
+        // function to change font color
+        function fontChange() {
+            document.getElementById("moreInfo").style.color = 'green';
+
+
+        }
+
+        // function to animate text
+        function fontAppear(j) {
+
+            var color = ["olive", "green", "lightseagreen", "teal"];
+            var ids = [document.getElementById("now"), document.getElementById("lets"), document.getElementById("Custom")];
+            i = j;
+            if (i < 4) {
+                if (i == 3) {
+                    ids[0].style.color = color[i];
+                    i++;
+                    setTimeout("fontAppear(i)", 1000);
+
+                } else {
+                    ids[i].style.color = color[i];
+                    i++;
+                    setTimeout("fontAppear(i)", 1000);
+
+                }
+
+            } else {
+                i = 0;
+                ids[0].style.color = 'white';
+                ids[1].style.color = 'white';
+                ids[2].style.color = 'white';
+
+                setTimeout("fontAppear(i)", 1000);
+
+
+            }
+
+        }
+
+
+
+
+
+        // This function will change the color of text in every 3 seconds.
+        function colorChange(j) {
+            var change = document.getElementById("custChange");
+            var color = ["green", "black", "orange", "red", "blue"];
+            i = j;
+
+            if (i <= color.length) {
+                change.style.color = color[i];
+                i++;
+                setTimeout("colorChange(i)", 3000);
+
+            } else {
+                i = 0;
+                setTimeout("colorChange(i)", 3000);
+            }
+        }
+
+        // This function will calculate the price of the Sneaker Customization.
+        function priceCalculator(form) {
+            var brand = document.getElementById("brandShoe").value;
+
+
+            var typeShoe = document.getElementById("typeShoe").value;
+            var numberOfShoe = document.getElementById("shoeNumber").value;
+            var sizeShoe = document.getElementById("shoeSize").value;
+
+            // this associative array will stored the value of rate of customization for each brand.
+            var shoeBrand = {
+                    "Nike": 170,
+                    "Adidas": 150,
+                    "Puma": 100,
+                    "Jordan": 190,
+                    "Vans": 80,
+                    "Converse": 70
+                }
+                // $1.5 dollar more if shoeSize is less than 8
+            if (sizeShoe <= 8) {
+                var newline = "\r\n"
+                var price = shoeBrand[brand] * 1.5 * numberOfShoe;
+                var msg = "You have choosen " + brand + ". And, its price is $" + shoeBrand[brand] + "."
+                msg += newline;
+                msg += "The type of Sneakers you have selected is " + typeShoe + ".";
+                msg += newline;
+                msg += "You have selected " + numberOfShoe + ", and their size is " + sizeShoe + ".";
+                msg += newline;
+                msg += "Hence, Your total price for Customization is " + price + ".";
+
+                alert(msg);
+
+            } else if (sizeShoe > 9 & sizeShoe <= 16) {
+                var newline = "\r\n"
+                var price = shoeBrand[brand] * 2.5 * numberOfShoe;
+                var msg = "You have choosen " + brand + ". And, its price is $" + shoeBrand[brand] + "."
+                msg += newline;
+                msg += "The type of Sneakers you have selected is " + typeShoe + ".";
+                msg += newline;
+                msg += "You have selected " + numberOfShoe + ", and their size is " + sizeShoe + ".";
+                msg += newline;
+                msg += "Hence, Your total price for Customization is $" + price + ".";
+
+                alert(msg);
+            }
+
+        }
+    </script>
+
+    <!-- Below is the code for hiding and showing the image by using jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                $("#imge").hide();
+            });
+
+            $("#show").click(function() {
+                $("#imge").show();
+            });
+        });
+    </script>
+
+
+</head>
+
+
+
+<body onload="fontAppear(0)">
+    <header>
+
+
+
+        <!--Navigation Bar-->
+        <nav id="navi">
+
+            <ul id="home">
+                <li class="logo">
+                    <img id="customLogo" src="pictures/logo.png" alt="This is the picture of our logo " />
+                </li>
+                <div class="items">
+                    <li><a href="#welcomeNote">Home</a></li>
+                    <li><a href="#customization">Customization</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#log">Contact</a></li>
+                    <li><a href="login.html" target="blank">Login</a></li>
+                </div>
+                <!-- This will add search bar with search icon-->
+                <li class="search-icon">
+                    <input type="search" placeholder="Search">
+                    <label.icon class="icon" id="icon">
+                        <span class="fa fa-search"><img src="pictures/search-512.webp" height="27px" width="20px" style="padding-top:12px" alt="search icon"/></span></label.icon>
+
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!--Whenever the mouse is over the text, another text will appear-->
+    <h2 id="lover" onmouseover="hChange()" onmouseout="h2Change()">Welcome Sneakers Lover</h2>
+    <p id="welcomeNote">This website is designed for the people like you to customize your own footwear.</p>
+    <br/><br/>
+    <figure id="img">
+        <img src="pictures/Rfcaa3ef1a2dc26bc4f1cce69bf32f2db.jpeg" id="jordan1" alt="image of sneakers" />
+
+    </figure>
+
+    <figure>
+        <img src="pictures/shoe-5087660_960_720.jpeg" alt="image of sneakers" id="airforce" onmouseover="imageChange()" onmouseout="conChange()" />
+
+    </figure>
+
+
+
+
+
+    <br/>
+    <br/><br/>
+    <a href="https://www.pexels.com/search/sneakers/" target="_blank" style="color:cadetblue; text-align:center; margin-right: 8px;">Click Here to see more pictures:</a>
+
+    <hr>
+    <hr>
+    <hr>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <h3 id="custName"> About CustomSneaks</h3>
+    <p id="moreInfo">CustomSneaks was founded by the group of college students from Mcneese State Univeristy, on March 23rd 2021.
+        <br/> The main purpose for building CustomSneaks is to give users a platform to craft their ideas and art on Sneakers.
+        <br/>This website is easily navigatable, and it is very easy to use. Similarly, through this website we offer services like
+        <br/> restoring and cleaning old shoes, and desginer advices etc.
+    </p>
+
+
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <section id="secondSection">
+        <p id="now">Now,</p>
+        <p id="lets">Let's do </p>
+        <pre id="Custom"> Customization</pre>
+    </section>
+
+    <br/><br/><br/>
+    <!-- On this section, we have image of clip arts-->
+    <section id="images">
+        <div id="clipb">
+            <p>
+
+                <img id="clipbb" src="pictures/clip4.jpeg" height=190 width=210 alt="sneakers image" onclick="animateImage();">
+            </p>
+        </div>
+
+        <div id="clipa">
+            <p>
+
+                <img id="clipaa" src="pictures/clip2.jpeg" height=190 width=210 alt="sneakers image">
+            </p>
+        </div>
+
+        <div id="clipe">
+            <p>
+
+                <img id="clipee" src="pictures/clip1.jpeg" height=190 width=210 alt="sneakers image">
+            </p>
+        </div>
+    </section>
+
+
+    <!-- JQuery is included in the section below, it will hide and show the image.-->
+    <div id="hid">
+        <p id="cli">
+
+            <img src="pictures/image6.jpeg" height=190 width=210 id="imge" alt="sneakers image">
+
+            <button id="hide">
+                        Click Here to Hide Image
+             </button>
+            <button id="show">
+                Click Here to show Image
+     </button>
+
+        </p>
+    </div>
+    <!-- Two buttons on this section are dedicated for the services provided by customSneaks-->
+    <section id="button">
+        <p id="services">
+            <a href="#welcomeNote"></a>
+            Our Services:
+        </p>
+        <div style="float:left;margin-left: 40%;">
+            <button id="customization"> 
+                    Customization
+                </button>
+
+        </div>
+
+        <div style="float:left; margin-left: 40px;">
+            <button id="cleaning" onclick="customForm()">
+                    Cleaning
+                </button>
+        </div>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+
+
+
+    </section>
+    <!-- Color of text will change, when you click on the text-->
+    <div id="formStyle" style="position: relative;">
+        <h3 id="custChange" onclick="colorChange(0);">Customization</h3>
+
+        <!-- Section for form-->
+        <form name="sample" id="sample" style="background-color: honeydew;">
+            <label for="brandShoe" style="padding-left: 30%;">Enter the Sneakers Brand:</label>
+            <input type="text" list="shoeBrand" id="brandShoe" name="brandShoe" accesskey="B" />
+
+            <datalist id="shoeBrand">
+                    <option value="Nike" >
+                    <option value="Adidas" >
+                    <option value="Puma" >
+                    <option value="Jordan">
+                    <option value="Vans">
+                    <option value="Converse">
+    
+                </option>
+    
+                </datalist>
+
+            <br/>
+            <label for="typeShoe" style="padding-left: 30%;">Enter the type of Sneakers: </label>
+            <input type="text" id="typeShoe" name="typeShoe" accesskey="T" placeholder=" e.g. AirMax" />
+            <br/>
+
+
+            <label for="shoeNumber" style="padding-left: 30%;"> Enter the Number of Shoes</label>
+            <input type="number" max="100" min="1" value="1" step="1" id="shoeNumber" />
+            <br/>
+
+            <label for="shoeSize" style="padding-left: 30%;"> Enter the Size of Shoes</label>
+            <input type="number" max="18" min="1" value="4" step="0.5" id="shoeSize" style="margin-left: 130px;" />
+            <br/>
+
+            <label for="colorSelect" style="padding-left: 30%;">Select the Color of Sneakers:</label>
+            <input type="color" id="colorSelect" />
+            <br/>
+
+            <label for="imageDesign" style="padding-left: 30%;">Upload sample of your Design file:</label>
+            <input type="file" id="imageDesign" style="width:20%;margin-left: 60px;" />
+            <br/>
+
+            <label for="moreDesign" style="padding-left: 30%;">Please provide more details about your Design:</label>
+            <br/>
+            <textarea id="moreDesign" rows="6" cols="50" wrap="soft"></textarea>
+            <div id="box">
+                <fieldset id="colorChoice">
+                    <legend>Secondary Color Choice:</legend>
+                    <label for="red">Choose other color beside your original Color:</label>
+                    <br/>
+
+                    <input type="checkbox" id="red" name="red" value="red" />
+                    <label for="red"> Red</label>
+                    <br/>
+
+                    <input type="checkbox" id="white" name="white" value="white" />
+                    <label for="white"> white</label>
+                    <br/>
+
+                    <input type="checkbox" id="Green" name="Green" value="Green" />
+                    <label for="Green"> Green</label>
+                    <br/>
+
+                    <input type="checkbox" id="Black" name="Black" value="Back" />
+                    <label for="Black">Black</label>
+                    <br/>
+
+                    <input type="checkbox" id="Blue" name="Blue" value="Blue" />
+                    <label for="Blue">Blue</label>
+                    <br/>
+
+
+                    <input type="checkbox" id="pink" name="pink" value="pink" />
+                    <label for="pink">Pink</label>
+
+
+
+                </fieldset>
+
+
+                <fieldset id="radioChoice">
+                    <legend>Confirmation</legend>
+                    <br/>
+                    <label for="correct">Make Sure all of the above informantion are correct:</label>
+                    <br/>
+                    <input type="radio" id="correct" value="correct" name="correction" onclick="confirm('All your information are correct')" />
+                    <label for="correct">correct</label>
+
+                    <input type="radio" id="incorrect" value="incorrect" name="correction" onclick="confirm('Your information are incorrect')" />
+                    <label for="incorrect">incorrect</label>
+
+                </fieldset>
+                <br/>
+                <!--This button will calculate the price for the customization-->
+                <button id="calc" onclick="priceCalculator(form)">
+                            Calculate Customization Price
+                        </button>
+
+                <br/>
+                <input type="reset" name="Clear" id="Clear" value="Clear" />
+                <br/>
+
+                <!-- This button will ask user for payment-->
+                <button id="payment" onclick="fileRead()">
+                           <img src="pictures/secure.jpeg" height=70 width=180  alt="image of payment logo" />
+                        </button>
+
+            </div>
+
+            <br/>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- This section is for the footer -->
+    <footer>
+        <div id="footerT" style="color:white;">
+            <h4>CustomSneaks</h4>
+            <pre>r
+        We appericate for doing business with you.
+        It has great pleasure to serve your need. 
+        Thank you!, for visitng our website. 
+        You are looking forward to serve you again.
+            </pre>
+
+            <h5>Connect Us through:</h5>
+
+            <div id="log" style="border-bottom: 100px;">
+                <a href="https://www.facebook.com/" target="_blank"> <img src="pictures/fb1.jpeg" alt="facebook logo" height=50 width=50> </a>
+                <a href="https://www.instagram.com/" target="_blank"> <img src="pictures/insta.jpeg" alt="insta logo" height=50 width=89 style="padding-left: 20px;"> </a>
+
+                <a href="https://twitter.com/" target="_blank" style="padding-bottom: 115px;"> <img src="pictures/twitter-logo.jpeg" alt="twitter logo" height=50 width=67 style="padding-left: 20px; "> </a>
+
+
+            </div>
+        </div>
+        <!--This section provides quick link to the various section of webpage-->
+        <div id="qLinks" style="color:white;background-color: #222222;">
+            <h5>Quick Links</h5>
+            <ul>
+                <li style="padding-top: 20px;"><a href="#welcomeNote">Home</a></li>
+                <li><a href="#customization">Customization</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#log">Contact</a></li>
+                <li style="padding-bottom: 35px;"><a href="login.html" target="blank">Login</a></li>
+            </ul>
+        </div>
+        <!--This is feedback section where users can write their comments, and complaints-->
+        <div id="feedback">
+            <h5>Feedback:</h5>
+
+            <label for="fullName" style="color:white; padding-right:5px">Name:</label>
+            <input type="text" id="fullName" name="name" />
+            <br>
+            <label for="emil" style="color:white; padding-right:5px">Email:</label>
+            <input type="email" id="emil" name="email">
+            <br/>
+            <label for="phn" style="color:white; padding-right:5px">Phone:</label>
+            <input type="text" id="phn" name="phns" placeholder="(xxx)-xxx-xxxx">
+
+            <br/>
+            <br/>
+
+            <label for="feed" style="color:white;">Feedback:</label>
+            <br/>
+            <textarea id="feed" rows="6" cols="50" wrap="soft"></textarea>
+
+            <button id="forward">
+                Forward
+            </button>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+
+
+</body>
+
+</html>

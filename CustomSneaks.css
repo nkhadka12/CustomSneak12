@@ -1,0 +1,495 @@
+   /*
+
+    Name: Nischal Khadka
+     Date: April 6, 2021
+     GroupName: RasenganCoder
+     ProjectName: CustomSneaks
+     project 1-->
+
+
+   */
+   
+   * {
+       margin: 0;
+       padding: 0;
+       color: #f2f2f2;
+       box-sizing: border-box;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   
+   #airforce,
+   #jordan1 {
+       height: 38%;
+       width: 48.3%;
+   }
+   
+   nav {
+       background-color: #222222;
+       padding: 10px 40px 10px 70px;
+       border: 1px solid red;
+       border-left: none;
+       border-right: none;
+   }
+   
+   nav ul {
+       display: flex;
+       list-style: none;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   nav ul li.logo {
+       flex: 1;
+       font-size: 30px;
+       font-weight: 700;
+   }
+   
+   nav ul div.items {
+       padding: 0 25px;
+       display: inline-flex
+   }
+   
+   nav ul div.items a {
+       text-decoration: none;
+       font-size: 18px;
+       padding: 0 12px;
+   }
+   
+   nav ul div.items a:hover {
+       color: cyan;
+   }
+   
+   nav ul .search-icon {
+       height: 40px;
+       width: 240px;
+       display: flex;
+       background: #f2f2f2;
+       border-radius: 5px;
+   }
+   
+   nav ul .search-icon input {
+       height: 100%;
+       width: 200px;
+       border: none;
+       outline: none;
+       padding: 0 10px;
+       color: #000;
+       font-size: 16px;
+       border-radius: 5px 0 0 5px;
+   }
+   
+   nav ul .search-icon .icon {
+       height: 100%;
+       width: 40px;
+       line-height: 40px;
+       text-align: center;
+       border: 1px solid #cccccc;
+       border-radius: 0 5px 5px 0;
+       cursor: pointer;
+   }
+   
+   nav ul .search-icon .icon:hover {
+       background: #e6e6e6;
+   }
+   
+   nav ul .search-icon .icon span {
+       color: #222222;
+       font-size: 18px;
+   }
+   
+   @media screen and (max-width: 1052px) {
+       nav {
+           padding: 10px 40px 10px 0px;
+       }
+       nav ul li.logo {
+           display: none;
+       }
+   }
+   
+   #customLogo {
+       height: 70px;
+       padding-right: 110px;
+   }
+   
+   #lover {
+       text-align: center;
+       padding-top: 40px;
+       color: teal;
+       font-family: 'Courier New', Courier, monospace;
+       font-size: 60px;
+       font-style: oblique;
+   }
+   
+   #welcomeNote {
+       color: mediumaquamarine;
+       text-align: center;
+   }
+   
+   #airforce {
+       padding-left: 35px;
+       margin-right: 34px;
+   }
+   
+   img {
+       padding-left: 8px;
+       display: inline;
+       float: left;
+       margin-bottom: 8px;
+   }
+   
+   #img {
+       padding-left: 6px;
+   }
+   
+   #custName {
+       color: teal;
+       font-family: 'Courier New', Courier, monospace;
+       font-style: oblique;
+       text-align: center;
+       font-size: 30px;
+       text-decoration-line: underline;
+   }
+   
+   #moreInfo {
+       color: green;
+       text-align: center;
+       font-style: italic;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   
+   #moreInfo:hover {
+       color: mediumaquamarine;
+   }
+   
+   #now,
+   #lets,
+   #Custom {
+       float: left;
+       font-size: 32px;
+       text-align: center;
+       font-style: oblique;
+   }
+   
+   #now {
+       padding-left: 35%;
+   }
+   
+   #customization {
+       color: teal;
+       align-items: center;
+       margin-top: 5px;
+       justify-content: center;
+       height: 50px;
+       width: 150px;
+       border-style: double;
+       border-radius: 15px;
+   }
+   
+   #cleaning {
+       color: teal;
+       align-items: center;
+       justify-content: center;
+       margin-top: 5px;
+       height: 50px;
+       width: 150px;
+       border-style: double;
+       border-radius: 15px;
+       border-color: cadetblue;
+   }
+   
+   #services {
+       color: teal;
+       text-align: center;
+       margin-top: 150px;
+       padding-left: 45px;
+       font-size: larger;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       text-decoration-line: underline;
+       text-decoration-style: dotted;
+       text-decoration-color: teal;
+   }
+   
+   legend {
+       color: green;
+       background: orange;
+   }
+   
+   label {
+       color: teal;
+       padding-left: 7px;
+       padding-top: 5px;
+   }
+   
+   #brandShoe {
+       color: teal;
+   }
+   
+   #formStyle {
+       border: 4px solid green;
+   }
+   
+   h3 {
+       color: green;
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 35px;
+       text-align: center;
+       margin-bottom: 10px;
+   }
+   
+   #brandShoe,
+   #typeShoe {
+       margin-left: 100px;
+       width: 20%;
+       border: 2px teal;
+       background: antiquewhite;
+       height: 2em;
+       border-radius: 10px;
+       padding-left: 10px;
+       text-align: center;
+       font-size: large;
+       margin-bottom: 30px;
+       color: green;
+   }
+   
+   #shoeNumber,
+   #shoeSize {
+       margin-left: 100px;
+       width: 5%;
+       min-width: 100px;
+       background: antiquewhite;
+       height: 2em;
+       border-radius: 10px;
+       padding-left: 10px;
+       text-align: center;
+       font-size: large;
+       margin-bottom: 30px;
+       color: green;
+   }
+   
+   #colorSelect,
+   #imageDesign {
+       margin-left: 90px;
+       width: 15%;
+       min-width: 100px;
+       background: antiquewhite;
+       height: 2em;
+       border-radius: 10px;
+       padding-left: 8px;
+       text-align: center;
+       font-size: large;
+       margin-bottom: 30px;
+       color: green;
+   }
+   
+   #moreDesign {
+       margin-left: 35%;
+       background: antiquewhite;
+       color: teal;
+       border-radius: 15px;
+       margin-top: 5px;
+   }
+   
+   @media (max-width: 600px) {
+       * {
+           width: 100%;
+           height: auto;
+           margin: auto;
+           padding: auto;
+       }
+       #brandShoe,
+       #typeShoe,
+       #moreDesign,
+       #colorSelect,
+       #imageDesign,
+       #shoeNumber,
+       #shoeSize {
+           padding-left: 30%;
+           margin-left: 30%;
+       }
+   }
+   
+   #box {
+       margin-top: 60px;
+       padding-left: 30px;
+       padding-bottom: 130px;
+   }
+   
+   #colorChoice {
+       width: 500px;
+       border: 3px solid green;
+       border-radius: 15px;
+       padding-left: 7px;
+       padding-top: 8px;
+       float: left;
+       margin-bottom: 400px;
+       margin-right: 50px;
+       margin-left: 90px;
+   }
+   
+   #radioChoice {
+       width: 500px;
+       border: 3px solid green;
+       border-radius: 15px;
+       padding-left: 7px;
+       padding-top: 8px;
+   }
+   
+   #calc {
+       color: teal;
+       margin-top: 170px;
+       height: 3em;
+       font-weight: bold;
+       border: 3px solid green;
+       border-radius: 15px;
+   }
+   
+   #Clear {
+       color: teal;
+       margin-top: 20px;
+       margin-left: 60px;
+       width: 90px;
+       height: 3em;
+       font-weight: bold;
+       border: 3px solid green;
+       border-radius: 15px;
+   }
+   
+   #payment {
+       color: teal;
+       align-items: center;
+       margin-top: 20px;
+       justify-content: center;
+       height: 80px;
+       width: 200px;
+       border: 3px solid green;
+       border-radius: 15px;
+   }
+   
+   footer {
+       background-color: #222222;
+       color: white;
+   }
+   
+   #footerT {
+       padding-left: 1px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: small;
+       float: left;
+       display: inline;
+       background-color: #222222;
+   }
+   
+   h4 {
+       font-size: xx-large;
+       font-weight: lighter;
+       padding-top: 15px;
+       padding-bottom: 10px;
+       background-color: #222222;
+   }
+   
+   h5 {
+       padding-top: 25px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: large;
+       padding-bottom: 10px;
+       background-color: #222222;
+   }
+   
+   #log {
+       padding-bottom: 100px;
+   }
+   
+   #qLinks {
+       padding-left: 300px;
+       padding-bottom: 50px;
+       float: left;
+   }
+   
+   div ul li {
+       background-color: #222222;
+       list-style: none;
+       padding-bottom: 15px;
+       padding-left: 27px;
+   }
+   
+   #feedback {
+       padding-left: 1100px;
+       padding-bottom: 80px;
+   }
+   
+   #fullName,
+   #emil,
+   #phn {
+       border-radius: 10px;
+       border-style: solid;
+       height: 2em;
+       color: black;
+       text-align: center;
+       margin-bottom: 10px;
+   }
+   
+   #feed {
+       width: 300px;
+       margin-left: 5px;
+       margin-top: 5px;
+       border-radius: 10px;
+       border-style: solid;
+       color: black;
+       font-size: 12px;
+       text-indent: 6px;
+       padding-top: 7px;
+   }
+   
+   #forward {
+       color: black;
+       width: 100px;
+       height: 35px;
+       background-color: blanchedalmond;
+       margin-top: 60px;
+       margin-left: 80px;
+       border-radius: 10px;
+       border-style: solid;
+       font-weight: bold;
+   }
+   
+   #hid {
+       color: teal;
+       padding-left: 1200px;
+   }
+   
+   #cli {
+       border-radius: 10px;
+       border-style: solid;
+       border-style: double;
+       border-color: yellowgreen;
+       color: teal;
+   }
+   
+   #show,
+   #hide {
+       color: teal;
+       text-align: center;
+       padding-top: 3px;
+       margin-top: 10px;
+       margin-left: 20px;
+       margin-bottom: 5px;
+       border-radius: 10px;
+       border-style: solid;
+       border-style: double;
+       border-color: yellowgreen;
+   }
+   
+   #clipe {
+       padding-left: 800px;
+   }
+   
+   #clipa {
+       padding-left: 500px;
+   }
+   
+   #clipb {
+       padding-top: 80px;
+       padding-left: 150px;
+   }
